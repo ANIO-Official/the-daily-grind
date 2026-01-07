@@ -36,6 +36,10 @@ https://github.com/ANIO-Official/the-daily-grind
 5.  (Once NPM is indeed installed in the project file directory, you'll see a node modules folder) Run the project using "node server.js" in the terminal.
 6.  You should see a message appear. Follow the link: "http://localhost:3000/"
 
+![Home Preview](assets/preview-home.png)
+
+![Contact Preview](assets/preview-contact.png)
+
 ## My process
 
   Steps brief about process:
