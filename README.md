@@ -70,8 +70,28 @@ res.Send is more so for internal testing. It accepts a simple string to display 
 
 **Why is the path module necessary when serving files? What could go wrong if you just used a relative path like 'public/index.html'?**
 
+The path module is important when serving files to ensure that we are using the absolute path. The path of the public directory can change depending on where you run the node command. Using Node.js's path module in combination with __dirname helps Express know where to find the public directory. Without it, you can encounter an error upon attempting the GET request.
 
 **How would you add a third page (e.g., a menu page) to this server? What steps would you take?**
+
+To add a third page:
+
+ 1. Create your HTML Page (e.g., "menu.html") inside the public folder.
+ 2. Create a new route in server.js using the absolute path of the new page like below:
+
+ ```JS
+    //Change from menu to what your page's name is
+    app.get('/menu', (req, res) => { //Get request handler
+        res.sendFile(path.join(__dirname, 'public/menu.html'))
+    }) //to Contact
+
+ ```
+ 3. Go test the newly created page in the browser. 
+    - Run node server.js
+    - Click the link to localhost:3000
+    - Change the url to localhost:3000/menu
+    - (Optional) Add a button in your home and/or contact page for easier access to the menu page without needing to edit the url.
+
   
 
 ### Useful resources
