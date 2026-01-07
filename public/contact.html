@@ -1,21 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Daily Grind ☕ | Contact Us</title>
-</head>
-<body>
-    <h1>Ready to get your grind on?</h1>
+  </head>
+  <body>
+    <h1>Ready to get your perfect bean blend?</h1>
     <h2><i>Contact Us!</i></h2>
-    <br>
+    <br />
+    <div id="signup-form-container">
+      <form id="signup-form">
+        <div id="signup-fields">
+            <legend><h2>Sign Up for Free Beans!☕</h2></legend>
+            <p><i>Beans are randomized. May be coffee, may be cocoa, might even be pinto. 
+                <br/>
+                But you'll brew them soon enough...
+            </i></p>
+          <label>Email Address</label>
+          <br />
+          <input class="signup-field" type="email" placeholder="jane4frappes@gmail.com..." />
+          <br />
+          <label>Name</label>
+          <br />
+          <input class="signup-field" type="text" placeholder="Jane Jones IV" />
+          <br/>
+          <label>Date of Birth (For Free Birthday Beans)</label>
+          <br />
+          <input class="signup-field" type="date"/>
+        </div>
 
-    <form>
-        <label>Email Address</label>
-        <input type="email" placeholder="jane4frappes@gmail.com..."/>
-        <br/>
-        <label>Name</label>
-        <input type="text" placeholder="Jane Jones IV"/>
-    </form>
-</body>
+        <br />
+        <button>Get Free Beans!</button>
+      </form>
+    </div>
+
+    <h2>Not Ready to Commit to the Bean Life?</h2>
+    <p><i>That's Okay, Head Back to Home Here</i></p>
+    <a href="http://localhost:3000"
+      ><button>Return Home as a No Bean Peasant😭</button></a
+    >
+  </body>
 </html>

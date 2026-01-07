@@ -4,10 +4,12 @@ const app = express() //instance of express
 const path = require('path') //import path
 const port = 3000
 
-//Middleware, using absolute paths.
-//using the index absolute path results in an error.
+//Middleware
+app.use(express.static(path.join(__dirname, 'public')));
+
+//Routes
 app.get('/', (req, res) => { //Get request handler
-    res.sendFile(path.join(__dirname, 'public/index.html'))
+    res.sendFile('public/index.html')
 }) // to Home/Root
 
 app.get('/contact', (req, res) => { //Get request handler
@@ -15,6 +17,7 @@ app.get('/contact', (req, res) => { //Get request handler
 }) //to Contact
 
 
+//Message
 app.listen(port, () =>{
     console.log(`Server is running at http://localhost:${port}. 
         Go check it out! （*゜ー゜*）`)
